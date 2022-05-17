@@ -15,6 +15,7 @@
 - Có lưu điểm cao nhất của người chơi.
 - Có thể chơi lại.
 - Có nhạc nền, âm thanh khi nhảy, âm thanh khi chết.
+- Có animation cho các tiểu hành tinh
 ### Preview
 ![gameplay1](https://user-images.githubusercontent.com/100185375/168907997-446c3842-18c2-43e2-8106-c995a5f7778d.png)
 ![gameplay2](https://user-images.githubusercontent.com/100185375/168907531-242f2ac1-6014-4c76-8288-7e12dc42b78f.png)
