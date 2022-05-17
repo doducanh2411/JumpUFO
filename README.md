@@ -37,3 +37,4 @@
 - Biết về logic của game Flappy Bird
 - Biết tự phát triển 1 dự án nhỏ
 ### Tự đánh giá: 8.75/10
+
