@@ -15,6 +15,11 @@
 - Có lưu điểm cao nhất của người chơi.
 - Có thể chơi lại.
 - Có nhạc nền, âm thanh khi nhảy, âm thanh khi chết.
+### Preview
+![gameplay1](https://user-images.githubusercontent.com/100185375/168907997-446c3842-18c2-43e2-8106-c995a5f7778d.png)
+![gameplay2](https://user-images.githubusercontent.com/100185375/168907531-242f2ac1-6014-4c76-8288-7e12dc42b78f.png)
+![gameplay3](https://user-images.githubusercontent.com/100185375/168908280-c9da2734-4147-416c-90e7-924c0e84df75.png)
+
 
 ## _Các kĩ thuật sử dụng_
 - Thư viện SDL2.0, SDL2_image, SDL2_ttf, SDL2_mixer.
@@ -36,5 +41,7 @@
 - Biết thêm về lập trình đồ họa
 - Biết về logic của game Flappy Bird
 - Biết tự phát triển 1 dự án nhỏ
+### Lưu ý
+- Hạn chế dùng chuột nhất có thể để tránh gặp bug
 ### Tự đánh giá: 8.75/10
 
