@@ -25,6 +25,7 @@
 ## _Các kĩ thuật sử dụng_
 - Thư viện SDL2.0, SDL2_image, SDL2_ttf, SDL2_mixer.
 - Tạo các đối tượng: nhân vật, map, text,...
+- Đọc và ghi dữ liệu file.
 - Tạo menu bắt đầu.
 
 ## _Kết luận_
