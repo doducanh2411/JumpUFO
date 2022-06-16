@@ -20,15 +20,10 @@ class Text : public BaseObject
 
         void SetText(const std::string& text) {textContent = text;}
         std::string GetText() const { return textContent; }
-
-    protected:
-
     private:
         std::string textContent;
         SDL_Color textColor;
-
         SDL_Texture* texture_;
-
         int width;
         int height;
 };

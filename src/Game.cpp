@@ -45,7 +45,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height){
     }
 }
 void Game::setUp(){
-    gMusic = Mix_LoadWAV( "res//sound//theme.wav" );
+    gMusic = Mix_LoadWAV( "res//sound//theme1.wav" );
     gDie = Mix_LoadWAV( "res//sound//dead.wav" );
     gJump = Mix_LoadWAV("res//sound//jump.wav");
 
@@ -56,6 +56,7 @@ void Game::setUp(){
 
     myMap.setAsteroidTex(gRenderer);
     myMap.setAsteroidPos();
+    myMap.setAsteroidSpeed();
 }
 void Game::handleEvent(){
     SDL_Event e;
@@ -76,7 +77,7 @@ void Game::render(){
     character.moving();
     character.shown(gRenderer);
 
-    myMap.Render(gRenderer);
+    myMap.renderMap(gRenderer);
 
     SDL_RenderPresent(gRenderer);
 }

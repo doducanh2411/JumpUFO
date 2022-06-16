@@ -9,55 +9,68 @@ Asteroid::~Asteroid(){
 }
 
 void Map::setAsteroidTex(SDL_Renderer *screen){
-    srand(time(NULL));
-    for(int i = 0; i < 10; i++){
-        int random = rand() % (TYPES - 1 + 1) + 1;
+    srand(time(0));
+    for(int i = 0; i < QUANTITY; i++){
+        int random = get_random(TYPES, 1);
         std::string path = "res//image//asteroid" + std::to_string(random) + ".png";
-        asteroidTex[i].loadFromFile(path, screen);
+        asteroid[i].loadFromFile(path, screen);
+        asteroid[i].set_id(random);
     }
 }
 void Map::setAsteroidPos(){
-    for(int i = 0; i < 10; i++){
-        asteroidTex[i].set_x_pos(DISTANCE * i + SCREEN_WIDTH);
+    srand(time(0));
+    for(int i = 0; i < QUANTITY; i++){
+        asteroid[i].set_x_pos(DISTANCE * i + SCREEN_WIDTH);
     }
-    srand(time(NULL));
-    for(int i = 0; i < 10; i++){
-        int random = rand() % (SCREEN_HEIGHT - 0 + 1) + 0;
-        asteroidTex[i].set_y_pos(random);
+    for(int i = 0; i < QUANTITY; i++){
+        int random = get_random(SCREEN_HEIGHT, 0);
+        asteroid[i].set_y_pos(random);
     }
 }
-
-void Map::Render(SDL_Renderer *screen){
-    int random = rand() % (SCREEN_HEIGHT - 0 + 1) + 0;
-    for(int i = 0; i < 10; i++){
-        asteroidTex[i].SetRect(asteroidTex[i].get_x_pos(), asteroidTex[i].get_y_pos());
-        asteroidTex[i].render(screen, degrees);
-        if(asteroidTex[i].get_x_pos() + asteroidTex[i].getW() < 0){
-            asteroidTex[i].set_x_pos(SCREEN_WIDTH);
-            asteroidTex[i].set_y_pos(random);
+void Map::setAsteroidSpeed(){
+    for(int i = 0; i < QUANTITY; i++){
+        switch (asteroid[i].get_id()){
+        case 1: asteroid[i].set_speed(6); break;
+        case 2: asteroid[i].set_speed(7); break;
+        case 3: asteroid[i].set_speed(5); break;
         }
     }
-    for(int i = 0; i < 10; i++){
-        if(asteroidTex[i].get_x_pos() == 90 ) point++;
-        asteroidTex[i].set_x_pos(asteroidTex[i].get_x_pos() - speed);
+}
+void Map::renderMap(SDL_Renderer *screen){
+    int random = get_random(SCREEN_HEIGHT, 0);
+    for(int i = 0; i < QUANTITY; i++){
+        asteroid[i].SetRect(asteroid[i].get_x_pos(), asteroid[i].get_y_pos());
+        asteroid[i].render(screen, degrees);
+        if(asteroid[i].get_x_pos() + asteroid[i].getW() < 0){
+            asteroid[i].set_x_pos(SCREEN_WIDTH);
+            asteroid[i].set_y_pos(random);
+        }
+    }
+    for(int i = 0; i < QUANTITY; i++){
+        if(asteroid[i].get_x_pos() == 90) point++;
+        asteroid[i].set_x_pos(asteroid[i].get_x_pos() - asteroid[i].get_speed());
     }
     degrees++;
 }
 bool Map::collision(BaseObject a){
-    bool frag[10];
+    bool frag[QUANTITY];
     bool fragg = false;
-    for(int i = 0; i < 10; i++){
-        frag[i] = checkCollision(a, asteroidTex[i]);
+    for(int i = 0; i < QUANTITY; i++){
+        frag[i] = checkCollision(a, asteroid[i]);
         if(frag[i] == true) fragg = true;
     }
     return fragg;
 }
 void Map::reset(){
-    for(int i = 0; i < 10; i++){
-        asteroidTex[i].set_x_pos(DISTANCE * i + SCREEN_WIDTH);
+    srand(time(0));
+    for(int i = 0; i < QUANTITY; i++){
+        asteroid[i].set_x_pos(DISTANCE * i + SCREEN_WIDTH);
+    }
+    for(int i = 0; i < QUANTITY; i++){
+        int random = get_random(SCREEN_HEIGHT, 0);
+        asteroid[i].set_y_pos(random);
     }
     point = 0;
-    speed = 5;
 }
 
 

@@ -5,10 +5,7 @@ ImpTimer::ImpTimer()
     start_tick = 0;
 }
 
-ImpTimer::~ImpTimer()
-{
-    //dtor
-}
+
 void ImpTimer::start(){
     start_tick = SDL_GetTicks();
 }

@@ -2,7 +2,6 @@
 
 Character::Character()
 {
-    //ctor
     xpos = 90;
     ypos = 1;
     yval = 0;

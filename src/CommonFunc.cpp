@@ -21,3 +21,6 @@ void fixBestPoint(int newPoint)
     }
     else std::cout << "Can't open file at getBestPoint()" << std::endl;
 }
+int get_random(int a, int b){
+    return rand() % (a - b + 1) + b;
+}

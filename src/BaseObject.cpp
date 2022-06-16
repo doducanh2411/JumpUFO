@@ -45,26 +45,21 @@ bool BaseObject::checkCollision(BaseObject a, BaseObject b){
     topB = b.getY();
     bottomB = b.getY() + b.getH();
 
-    if( bottomA <= topB )
-    {
+    if( bottomA <= topB ){
         frag = false;
     }
 
-    if( topA >= bottomB )
-    {
+    if( topA >= bottomB ){
         frag = false;
     }
 
-    if( rightA <= leftB )
-    {
+    if( rightA <= leftB ){
         frag = false;
     }
 
-    if( leftA >= rightB )
-    {
+    if( leftA >= rightB ){
         frag = false;
     }
-
     return frag;
 }
 

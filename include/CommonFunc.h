@@ -27,8 +27,7 @@ static Mix_Chunk* gMusic = NULL;
 static Mix_Chunk* gDie = NULL;
 static Mix_Chunk* gJump = NULL;
 
-
 int getBestPoint();
 void fixBestPoint(int newPoint);
-
+int get_random(int a, int b);
 #endif // COMMONFUNC_H

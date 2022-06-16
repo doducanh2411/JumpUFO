@@ -32,14 +32,12 @@ void Text::Free()
         texture_ = NULL;
     }
 }
-
 void Text::SetColor(Uint8 red, Uint8 green, Uint8 blue)
 {
     textColor.r = red;
     textColor.g = green;
     textColor.b = blue;
 }
-
 void Text::RenderText(SDL_Renderer *screen, int xpos, int ypos)
 {
     SDL_Rect renderQuad = { xpos, ypos, width, height };
