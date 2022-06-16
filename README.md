@@ -1,7 +1,10 @@
 # JumpUFO![UFO](https://user-images.githubusercontent.com/100185375/168901849-d64be555-2e70-4d4d-be5a-44d21f3f41b5.png)
 ## _Hướng dẫn cài đặt_
-
+- Tải và cài đặt lần lượt SDL, SDL_image, SDL_ttf, SDL_mixer tại trang chủ chính thức và add và CodeBlock.
+- Clone file về máy và add vào CodeBlock.
+- Chạy trên CodeBlock.
 ## _Mô tả chung về trò chơi_
+- Demo: https://www.youtube.com/watch?v=Bay1HhLP_e8
 - Lấy cảm hứng từ chính trò chơi do người Việt làm Flappy Bird.
 - Người chơi điều khiển UFO nhảy lên xuống bằng phím Space tránh va chạm với các tiểu hành tinh.
 - Có 3 dạng tiểu hành tinh với kích cỡ khác nhau ![asteroid2](https://user-images.githubusercontent.com/100185375/168902480-bf54e0d9-024c-4351-80f8-622770c66630.png)
