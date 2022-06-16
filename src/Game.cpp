@@ -56,7 +56,6 @@ void Game::setUp(){
 
     myMap.setAsteroidTex(gRenderer);
     myMap.setAsteroidPos();
-    myMap.setAsteroidSpeed();
 }
 void Game::handleEvent(){
     SDL_Event e;
