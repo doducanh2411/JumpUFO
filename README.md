@@ -48,5 +48,5 @@
 - Biết tự phát triển 1 dự án nhỏ
 ### Lưu ý
 - Hạn chế dùng chuột nhất có thể để tránh gặp bug
-### Tự đánh giá: 8.75/10
+### Tự đánh giá: 9/10
 
